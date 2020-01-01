@@ -28,7 +28,7 @@ header > h1 {
     width: 200px; /* So that it doesn't stretch to whole page just small box*/
     margin: 20px auto; /* Margin is space between border and next elemnt, auto centers it*/
     color: #303027;
-    font-size: 45px;
+    font-size: 65px;
     padding: 15px 20px; /* Padding is the space inside the element between element and border*/
     position: relative;
 }
@@ -40,7 +40,7 @@ header > h1 {
     border: 2px solid #303027;
     border-radius: 10%;
     color: white;
-    font-size: 14px;
+    font-size: 24px;
     padding: 7px 7px;
 
 
@@ -49,14 +49,14 @@ header > h1 {
 #user-label {
     position: absolute; /* Then I made parent element .scoreboard relative*/ 
     top: 25%;
-    left: -20px;
+    left: -50px;
     
 }
 
 #computer-label {
     position: absolute;  /* Then I made parent element .scoreboard relative*/ 
     top: 25%;
-    right: -20px;
+    right: -50px;
 
 }
 
@@ -89,6 +89,7 @@ header > h1 {
 
 #r:hover { /* The color it changes to when a user hovers over it*/
     background: white;
+    transition: all 0.3s ease; /* Ease into colour transition of white */ 
 }
 
 #p {
@@ -98,6 +99,7 @@ header > h1 {
 
 #p:hover { /* The color it changes to when a user hovers over it*/
     background: white;
+    transition: all 0.3s ease; /* Ease into colour transition of white */ 
 }
 
 
@@ -108,6 +110,7 @@ header > h1 {
 
 #s:hover { /* The color it changes to when a user hovers over it*/
     background: white;
+    transition: all 0.3s ease; /* Ease into colour transition of white */ 
 }
 
 #action-message {
