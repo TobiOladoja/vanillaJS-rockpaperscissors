@@ -1,0 +1,53 @@
+  @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    background: #FFEB08;
+   font-family: Orbitron;
+   text-align: center;
+}
+
+header {
+    background: white;
+    padding: 20px; /* Create room on top and below */
+}
+
+header > h1 {
+    color: #303027;
+}
+
+.scoreboard {
+    border: 5px solid #303027;
+    border-radius: 10%; /* To make it more round */
+    background: white;
+    width: 200px; /* So that it doesn't stretch to whole page just small box*/
+    margin: 20px auto; /* Margin is space between border and next elemnt, auto centers it*/
+    color: #303027;
+    font-size: 45px;
+    padding: 15px 20px; /* Padding is the space inside the element between element and border*/
+}
+
+
+
+.badge {
+    background: rgb(190, 37, 37);
+    border: 2px solid #303027;
+    border-radius: 10%;
+    color: white;
+    font-size: 14px;
+    padding: 7px 7px;
+
+
+}
+
+#user-label {
+    
+}
+
+#computer-label {
+
+}
