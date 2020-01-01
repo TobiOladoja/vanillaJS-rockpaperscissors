@@ -6,9 +6,9 @@
 }
 
 body {
-    background: #FFEB08;
+    background: linear-gradient(to right, #0099f7, #f11712); 
    font-family: Orbitron;
-   text-align: center;
+   text-align: center; /* To center everything on the page */
 }
 
 header {
@@ -18,6 +18,7 @@ header {
 
 header > h1 {
     color: #303027;
+    font-size: 70px;
 }
 
 .scoreboard {
@@ -59,3 +60,63 @@ header > h1 {
 
 }
 
+.result {
+    font-size: 50px;
+    color: white;
+}
+
+.choices {
+    display: flex; /* To display flex */
+    justify-content: center;; /* Centers flex container */
+    margin: 50px 0;
+}
+
+.choice {
+    border: 4px solid white;
+    border-radius: 95%;
+    padding: 50px;
+    margin: 0 30px;
+}
+
+.choice:hover {
+    cursor: pointer; /* Changed the cursor to pointer */
+}
+
+#r {
+    background: linear-gradient(to right, #f12711, #f5af19); 
+    
+}
+
+#r:hover { /* The color it changes to when a user hovers over it*/
+    background: white;
+}
+
+#p {
+    background: linear-gradient(to right, #141e30, #243b55);
+
+}
+
+#p:hover { /* The color it changes to when a user hovers over it*/
+    background: white;
+}
+
+
+#s {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+
+}
+
+#s:hover { /* The color it changes to when a user hovers over it*/
+    background: white;
+}
+
+#action-message {
+    font-size: 50px;
+    color: white;
+}
+
+img { /* This was to make the img circular*/
+    border-radius: 50%;
+    padding: 0px;
+ 
+}
