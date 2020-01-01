@@ -19,11 +19,29 @@ function getComputerChoice() {
 function theGame(userChoice) {
   // User choice is now random as we've passed getComputerChoice
   const computerChoice = getComputerChoice();
-  console.log('computer Choice is: ' + computerChoice);
-  console.log('user Choice is: ' + userChoice);
+  switch (
+    userChoice + computerChoice // First three cases is when user wins. case 'user\computer'
+  ) {
+    // User wins
+    case 'rp':
+    case 'pr':
+    case 'sp':
+      console.log('User wins');
+      break;
+    //   User loses
+    case 'rp':
+    case 'ps':
+    case 'sr':
+      console.log('User loses');
+      break;
+    //   User draws
+    case 'rr':
+    case 'pp':
+    case 'ss':
+      console.log("You've drawn with the computer");
+      break;
+  }
 }
-
-theGame('c');
 
 function main() {
   rock_div.addEventListener('click', function() {
