@@ -16,6 +16,16 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+function win() {
+  console.log('win');
+}
+function lose() {
+  console.log('lose');
+}
+function draw() {
+  console.log('draw');
+}
+
 function theGame(userChoice) {
   // User choice is now random as we've passed getComputerChoice
   const computerChoice = getComputerChoice();
@@ -23,22 +33,22 @@ function theGame(userChoice) {
     userChoice + computerChoice // First three cases is when user wins. case 'user\computer'
   ) {
     // User wins
-    case 'rp':
+    case 'rs':
     case 'pr':
     case 'sp':
-      console.log('User wins');
+      win();
       break;
     //   User loses
     case 'rp':
     case 'ps':
     case 'sr':
-      console.log('User loses');
+      lose();
       break;
     //   User draws
     case 'rr':
     case 'pp':
     case 'ss':
-      console.log("You've drawn with the computer");
+      draw();
       break;
   }
 }
