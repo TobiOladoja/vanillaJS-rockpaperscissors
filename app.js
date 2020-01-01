@@ -18,19 +18,42 @@ function getComputerChoice() {
 function convertToWord(letter) {
   if (letter === 'r') return 'Rock';
   if (letter === 'p') return 'Paper';
-  if (letter === 's') return 'Scissors';
+  else return 'Scissors';
 }
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
-  computerScore_span = computerScore;
-  result_div.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(
+  computerScore_span.innerHTML = computerScore;
+  const smallUserWord = 'user'.fontsize(3).sup(); // Make word user small and sup puts it in nth pos
+  const smallCompWord = 'comp'.fontsize(3).sup(); // Make word comp small and sup puts it in the nth pos
+  result_div.innerHTML = `${convertToWord(
+    userChoice
+  )}${smallUserWord} beats ${convertToWord(
     computerChoice
-  )} You win!`;
+  )}${smallCompWord} You win!`;
 }
-function lose() {}
-function draw() {
-  console.log('draw');
+
+function lose(userChoice, computerChoice) {
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  const smallUserWord = 'user'.fontsize(3).sup(); // Make word user small and sup puts it in nth pos
+  const smallCompWord = 'comp'.fontsize(3).sup(); // Make word comp small and sup puts it in the nth pos
+  result_div.innerHTML = `${convertToWord(
+    userChoice
+  )}${smallUserWord} loses to ${convertToWord(
+    computerChoice
+  )}${smallCompWord} You lose!`;
+}
+
+function draw(userChoice, computerChoice) {
+  const smallUserWord = 'user'.fontsize(3).sup(); // Make word user small and sup puts it in nth pos
+  const smallCompWord = 'comp'.fontsize(3).sup(); // Make word comp small and sup puts it in the nth pos
+  result_div.innerHTML = `${convertToWord(
+    userChoice
+  )}${smallUserWord} is same as ${convertToWord(
+    computerChoice
+  )}${smallCompWord} It's a draw. You tied!`;
 }
 
 function theGame(userChoice) {
