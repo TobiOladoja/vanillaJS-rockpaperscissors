@@ -1,5 +1,5 @@
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 
 let userScore_span = document.querySelector('#user-score');
 let computerScore_span = document.querySelector('#computer-score');
@@ -15,13 +15,22 @@ function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
-
-function win() {
-  console.log('win');
+function convertToWord(letter) {
+  if (letter === 'r') return 'Rock';
+  if (letter === 'p') return 'Paper';
+  if (letter === 's') return 'Scissors';
 }
-function lose() {
-  console.log('lose');
+function win(userChoice, computerChoice) {
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span = computerScore;
+  result_div.innerHTML =
+    convertToWord(userChoice) +
+    ' beats ' +
+    convertToWord(computerChoice) +
+    ' You win!';
 }
+function lose() {}
 function draw() {
   console.log('draw');
 }
@@ -36,19 +45,19 @@ function theGame(userChoice) {
     case 'rs':
     case 'pr':
     case 'sp':
-      win();
+      win(userChoice, computerChoice);
       break;
     //   User loses
     case 'rp':
     case 'ps':
     case 'sr':
-      lose();
+      lose(userChoice, computerChoice);
       break;
     //   User draws
     case 'rr':
     case 'pp':
     case 'ss':
-      draw();
+      draw(userChoice, computerChoice);
       break;
   }
 }
