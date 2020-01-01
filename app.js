@@ -19,10 +19,11 @@ function getComputerChoice() {
 function theGame(userChoice) {
   // User choice is now random as we've passed getComputerChoice
   const computerChoice = getComputerChoice();
-  console.log(computerChoice);
+  console.log('computer Choice is: ' + computerChoice);
+  console.log('user Choice is: ' + userChoice);
 }
 
-theGame();
+theGame('c');
 
 function main() {
   rock_div.addEventListener('click', function() {
