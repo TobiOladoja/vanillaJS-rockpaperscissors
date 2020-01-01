@@ -24,11 +24,9 @@ function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span = computerScore;
-  result_div.innerHTML =
-    convertToWord(userChoice) +
-    ' beats ' +
-    convertToWord(computerChoice) +
-    ' You win!';
+  result_div.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(
+    computerChoice
+  )} You win!`;
 }
 function lose() {}
 function draw() {
