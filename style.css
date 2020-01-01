@@ -29,11 +29,12 @@ header > h1 {
     color: #303027;
     font-size: 45px;
     padding: 15px 20px; /* Padding is the space inside the element between element and border*/
+    position: relative;
 }
 
 
 
-.badge {
+.badge { /* Both labels (user and computer) share same class of badge */
     background: rgb(190, 37, 37);
     border: 2px solid #303027;
     border-radius: 10%;
@@ -45,9 +46,16 @@ header > h1 {
 }
 
 #user-label {
+    position: absolute; /* Then I made parent element .scoreboard relative*/ 
+    top: 25%;
+    left: -20px;
     
 }
 
 #computer-label {
+    position: absolute;  /* Then I made parent element .scoreboard relative*/ 
+    top: 25%;
+    right: -20px;
 
 }
+
