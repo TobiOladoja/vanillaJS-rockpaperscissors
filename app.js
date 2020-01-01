@@ -9,6 +9,31 @@ let rock_div = document.querySelector('#r');
 let paper_div = document.querySelector('#p');
 let scissors_div = document.querySelector('#s');
 
-rock_div.addEventListener('click', function() {
-  userScore_span.innerHTML++;
-});
+function getComputerChoice() {
+  // Math.random randomizes the choices of r(rock), p(paper) and s(scissors).
+  const choices = ['r', 'p', 's'];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+}
+
+function theGame(userChoice) {
+  // User choice is now random as we've passed getComputerChoice
+  const computerChoice = getComputerChoice();
+  console.log(computerChoice);
+}
+
+theGame();
+
+function main() {
+  rock_div.addEventListener('click', function() {
+    theGame('r');
+  });
+  paper_div.addEventListener('click', function() {
+    theGame('p');
+  });
+  scissors_div.addEventListener('click', function() {
+    theGame('s');
+  });
+}
+
+main();
